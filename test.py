@@ -1,9 +1,20 @@
-import pandas as pd
-import sqlite3
-import requests
-import time
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import time
 
 #driverオブジェクト生成
-driver = webdriver.Chrome(executable_path = '/opt/win32/chromedriver.exe')
-time.sllep(5)
+driver_path = '/opt/win32/chromedriver-mac-arm64/chromedriver'
+
+service = Service(executable_path=driver_path)
+driver = webdriver.Chrome(service=service)
+
+#amzonのURL
+amazon_url = 'https://www.amazon.co.jp/'
+
+#ページを取得
+driver.get(amazon_url)
+
+#5秒間ストップ
+time.sleep(5)
+
+driver.quit()
