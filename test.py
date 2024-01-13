@@ -52,3 +52,4 @@ for HREF in HREFS:
     img = driver.find_element(By.XPATH, '//div[@id="imgTagWrapperId"]/img').get_attribute("src")
     print("[INFO]  img :", img)
 
+# ffff 
