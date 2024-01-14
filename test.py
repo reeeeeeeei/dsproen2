@@ -32,16 +32,13 @@ for URL in URLS:
     URL = URL.get_attribute("href")
     print("[INFO] URL :", URL)
     HREFS.append(URL)
-     #商品詳細の取得 
 
+#商品詳細の取得と
 for HREF in HREFS:
     driver.get(HREF)
     # title
     title = driver.find_element(By.ID, "productTitle").text
     print("[INFO]  title :", title)
-    # original_price
-    original_price = driver.find_element(By.CSS_SELECTOR, 'div.a-section.a-spacing-small.aok-align-center > span > span > span > span > span.a-offscreen').text
-    print("[INFO] original_price:", original_price)
     # discount_price 
     discount_price = driver.find_element(By.CSS_SELECTOR, 'div.aok-align-center > span > span > span.a-price-whole').text
     print("[INFO]  discount_price :", discount_price)
@@ -51,3 +48,4 @@ for HREF in HREFS:
     # img
     img = driver.find_element(By.XPATH, '//div[@id="imgTagWrapperId"]/img').get_attribute("src")
     print("[INFO]  img :", img)
+
