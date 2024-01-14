@@ -33,7 +33,6 @@ for URL in URLS:
     URL = URL.get_attribute("href")
     print("[INFO] URL :", URL)
     HREFS.append(URL)
-<<<<<<< HEAD
 
 #商品詳細の取得
 for HREF in HREFS:
@@ -51,6 +50,4 @@ for HREF in HREFS:
     img = driver.find_element(By.XPATH, '//div[@id="imgTagWrapperId"]/img').get_attribute("src")
     print("[INFO]  img :", img)
 
-=======
  
-
