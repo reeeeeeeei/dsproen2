@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from time import sleep
+import csv
 
 
 chrome_options = Options()
@@ -32,6 +33,7 @@ for URL in URLS:
     URL = URL.get_attribute("href")
     print("[INFO] URL :", URL)
     HREFS.append(URL)
+<<<<<<< HEAD
 
 #商品詳細の取得
 for HREF in HREFS:
@@ -48,4 +50,7 @@ for HREF in HREFS:
     # img
     img = driver.find_element(By.XPATH, '//div[@id="imgTagWrapperId"]/img').get_attribute("src")
     print("[INFO]  img :", img)
+
+=======
+ 
 
