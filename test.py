@@ -33,7 +33,7 @@ for URL in URLS:
     print("[INFO] URL :", URL)
     HREFS.append(URL)
 
-#商品詳細の取得と
+#商品詳細の取得
 for HREF in HREFS:
     driver.get(HREF)
     # title
