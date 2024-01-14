@@ -42,14 +42,15 @@ for HREF in HREFS:
     # title
     title = driver.find_element(By.ID, "productTitle").text
     print("[INFO]  title :", title)
-    # price 
-    price = driver.find_element(By.CSS_SELECTOR, 'div.aok-align-center > span > span > span.a-price-whole').text
-    print("[INFO]  price :", price)
-    # discount
-    discount = driver.find_element(By.CSS_SELECTOR, 'div.a-spacing-none > span.savingsPercentage').text
-    print("[INFO] discount:", discount)
+    # original_price
+    original_price = driver.find_element(By.CSS_SELECTOR, 'div.a-section.a-spacing-small.aok-align-center > span > span > span > span > span.a-offscreen').text
+    print("[INFO] original_price:", original_price)
+    # discount_price 
+    discount_price = driver.find_element(By.CSS_SELECTOR, 'div.aok-align-center > span > span > span.a-price-whole').text
+    print("[INFO]  discount_price :", discount_price)
+    # discount_rate
+    discount_rate = driver.find_element(By.CSS_SELECTOR, 'div.a-spacing-none > span.savingsPercentage').text
+    print("[INFO] discount_rate:", discount_rate)
     # img
     img = driver.find_element(By.XPATH, '//div[@id="imgTagWrapperId"]/img').get_attribute("src")
     print("[INFO]  img :", img)
-
-# ffff 
